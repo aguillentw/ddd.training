@@ -18,6 +18,20 @@ class CartTest {
 
         assertEquals(1, actual.size());
         assertEquals("Some test product", actual.get(0).getName());
+    }
 
+    @Test
+    public void itShouldAddAnApplePencilToCart() {
+        // GIVEN
+        Product product = new Product("Apple pencil");
+        Cart cart = new Cart();
+
+        // WHEN
+        cart.add(product);
+
+        // THEN
+        List<Product> actual = cart.getProducts();
+        assertEquals(1, cart.getProducts().size());
+        assertEquals("Apple pencil", actual.get(0).getName());
     }
 }
