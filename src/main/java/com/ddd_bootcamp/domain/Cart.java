@@ -49,4 +49,9 @@ public class Cart {
         Cart anotherCart = (Cart) object;
         return anotherCart.id.equals(this.id);
     }
+
+    @Override
+    public int hashCode() {
+        return this.id.hashCode();
+    }
 }
