@@ -4,20 +4,25 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Cart {
-    private List<Product> products = new ArrayList<>();
+    private List<Item> items = new ArrayList<>();
 
-    public void add(Product product) {
-        products.add(product);
+    public void add(Item item) {
+        items.add(item);
     }
 
-    public List<Product> getProducts() {
-        return products;
+    public List<Item> getItems() {
+        return items;
+    }
+
+    public void remove(Item item) {
+        String productToRemove = item.getProduct().getName();
+        items.removeIf(i -> i.getProduct().getName().equals(productToRemove));
     }
 
     @Override
     public String toString() {
         return "Cart{" +
-                "products=" + products +
+                "items=" + items +
                 '}';
     }
 }
