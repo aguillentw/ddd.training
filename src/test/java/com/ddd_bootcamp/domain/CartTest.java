@@ -31,4 +31,21 @@ class CartTest {
         assertEquals(1, cart.getProducts().size());
         assertEquals("Sony Wireless headphone", actual.get(0).getName());
     }
+
+    @Test
+    public void itShouldAddTwoApplePencils() {
+        Product pencil1 = new Product("pencil", "Apple", "1L");
+        Product pencil2 = new Product("pencil", "Apple", "2L");
+        Cart cart = new Cart();
+
+        cart.add(pencil1);
+        cart.add(pencil2);
+
+        List<Product> actual = cart.getProducts();
+        assertEquals(2, cart.getProducts().size());
+        assertEquals("1L", actual.get(0).getUuid());
+        assertEquals("2L", actual.get(1).getUuid());
+    }
+
+    // Add 2 quantity of “Apple Pencil” to a Cart.
 }
