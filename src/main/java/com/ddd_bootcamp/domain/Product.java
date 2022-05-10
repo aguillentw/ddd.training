@@ -3,8 +3,8 @@ package com.ddd_bootcamp.domain;
 public class Product {
     private String name;
 
-    public Product(String name) {
-        this.name = name;
+    public Product(String name, String brand) {
+        this.name = brand + " " + name;
     }
 
     public String getName() {

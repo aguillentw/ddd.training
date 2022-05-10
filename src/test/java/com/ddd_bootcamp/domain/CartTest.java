@@ -9,29 +9,26 @@ import static org.junit.jupiter.api.Assertions.*;
 class CartTest {
 
     @Test
-    void shouldAddProductToCart() {
-        Cart cart = new Cart();
-        Product product = new Product("Some test product");
-        cart.add(product);
-
-        List<Product> actual = cart.getProducts();
-
-        assertEquals(1, actual.size());
-        assertEquals("Some test product", actual.get(0).getName());
-    }
-
-    @Test
     public void itShouldAddAnApplePencilToCart() {
-        // GIVEN
-        Product product = new Product("Apple pencil");
+        Product product = new Product("pencil", "Apple");
         Cart cart = new Cart();
 
-        // WHEN
         cart.add(product);
 
-        // THEN
         List<Product> actual = cart.getProducts();
         assertEquals(1, cart.getProducts().size());
         assertEquals("Apple pencil", actual.get(0).getName());
+    }
+
+    @Test
+    public void itShouldAddSonyWirelessHeadphone() {
+        Product product = new Product("Wireless headphone", "Sony");
+        Cart cart = new Cart();
+
+        cart.add(product);
+
+        List<Product> actual = cart.getProducts();
+        assertEquals(1, cart.getProducts().size());
+        assertEquals("Sony Wireless headphone", actual.get(0).getName());
     }
 }
