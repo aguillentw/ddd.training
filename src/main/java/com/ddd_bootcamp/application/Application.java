@@ -35,12 +35,12 @@ public class Application {
     }
 
     /*
-    * Code Problem 7
+    * Code Problem 9
 
- Add Price to a Product . We need support for only one currency, say - USD.
---
-Note –
- For modelling currency - Please use java.util.Currency (Currency.getInstance("USD"))  or what your programming language provides, if none just use String for now.
- new Product("Apple Pencil", new Price(...));
-    *  */
+Create Order(with Products) when Cart is checked out. Also, Mark Cart as checked out .
+ --
+ Note –
+While Creating Order please do not use Item class but use Product class. Flatten out products in Item, that means, if Cart has  Item with Product “Apple Pencil” and Quantity two, then create two Product objects for “Apple Pencil” and add them to Order’s product list.
+ Order order = new Order( List<Product> products)
+ * */
 }

@@ -1,4 +1,7 @@
-package com.ddd_bootcamp.domain;
+package com.ddd_bootcamp.domain.service;
+
+import com.ddd_bootcamp.domain.Price;
+import com.ddd_bootcamp.domain.Product;
 
 import java.math.BigDecimal;
 import java.util.Map;

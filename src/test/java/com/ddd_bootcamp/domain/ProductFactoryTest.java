@@ -6,6 +6,8 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import java.math.BigDecimal;
 import java.util.Currency;
 import java.util.Map;
+
+import com.ddd_bootcamp.domain.service.ProductFactory;
 import org.junit.jupiter.api.Test;
 
 class ProductFactoryTest {
