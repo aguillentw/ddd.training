@@ -31,4 +31,16 @@ class CartTest {
 
         assertTrue(cart1.equals(cart1));
     }
+
+    @Test
+    public void itShouldHaveCheckedOutOrder() {
+        // GIVEN
+        Cart c = new Cart();
+
+        // WHEN
+        c.checkOut();
+
+        // THEN
+        assertEquals("checked-out", c.getState());
+    }
 }
