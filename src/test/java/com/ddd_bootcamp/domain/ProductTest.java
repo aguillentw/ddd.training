@@ -17,18 +17,12 @@ class ProductTest {
         assertEquals(product.getPrice().getAmount(), amount);
     }
 
-    /*Code Problem 6
-
-    As a business User, I would like to differentiate between two Carts, even if they contain same Item ( both carts have Product “Sony Wireless headphone” with 1 quantity)
- --
-    Note –
-    Two carts where items are same, equality on Carts should return false
-    Cart cart1 = Cart();
-    Cart cart2 = Cart();
-    Item item1 = new Item(new Product(”Sony Wireless headphone"), 1);
-            Item item2 = new Item(new Product(”Sony Wireless headphone"), 1);
-            cart1.add(item1);
- cart2.add(item2);
- cart1.equals(cart2)  =>  should return false*/
-
+//    Code Problem 8
+//
+//    As a Business User, I would like to price my product 10% below competitor price (competitor price is available for product) .
+//        --
+//    Note – Assume that HashMap/Dictionary of Competitor Product Name and price is available. Competitor Product name matches 1 to 1 with our Product Name.
+//    Please do not create pricing discount logic inside Product class. Pass discounted price while creating Product.
+//        new Product( ”Apple Pencil", Price(discountedPrice, Currency.getInstance("USD")));
+//        new Product( ”Apple Pencil", Price(125, Currency.getInstance("USD"))) – 125 is already discount price
 }
